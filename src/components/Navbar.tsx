@@ -11,6 +11,7 @@ import {
   DropdownMenuSeparator,
 } from '@/components/ui/dropdown-menu';
 import { Badge } from '@/components/ui/badge';
+import { ThemeToggle } from './ThemeToggle';
 
 export function Navbar() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -111,10 +112,13 @@ export function Navbar() {
                   View all notifications
                 </DropdownMenuItem>
               </DropdownMenuContent>
-            </DropdownMenu>
+          </DropdownMenu>
 
-            {/* User Menu */}
-            <DropdownMenu>
+          {/* Theme Toggle */}
+          <ThemeToggle />
+
+          {/* User Menu */}
+          <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="sm" className="p-1">
                   <div className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center">
